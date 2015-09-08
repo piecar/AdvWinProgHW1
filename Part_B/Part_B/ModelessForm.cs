@@ -16,5 +16,42 @@ namespace Part_B
         {
             InitializeComponent();
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void applyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void nameBox_PressUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+            }
+        }
+
+        private void ModelessForm_PressUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            }
+
+        }
     }
 }

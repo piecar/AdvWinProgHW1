@@ -7,3 +7,4 @@ C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Deb
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.csproj.GenerateResource.Cache
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.exe
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.pdb
+C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.ModelessForm.resources
