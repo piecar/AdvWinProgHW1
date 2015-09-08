@@ -30,7 +30,8 @@ public class myForm : Form
 		
 		//Hey Label
 		lHey = new Label();
-		lHey.Name = inName;
+		lHey.Name = "HeyPanel";
+		lHey.Text = inName;
 		HeyPanel.Controls.Add(lHey);
 		
 		//YoPanel
@@ -41,23 +42,27 @@ public class myForm : Form
 		
 		//Yo Label
 		lYo = new Label();
-		lYo.Name = "Comment: ";
-		lYo.Top = 30;
+		lYo.Name = "To Label";
+		lYo.Text = "Comment: ";
+		lYo.Top = 35;
 		lYo.Left = 30;
+		lYo.AutoSize = true;
 		YoPanel.Controls.Add(lYo);
 		
 		//myBox
 		myBox = new TextBox();
 		myBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		myBox.Location = new Point(100, 50);
+		myBox.Location = new Point(100, 30);
 		myBox.Size = new Size(60, 20);
 		YoPanel.Controls.Add(myBox);
 		
 		//pushButton
 		pushButton = new Button();
-		pushButton.Name = "Push the Button";
+		pushButton.Name = "pushButton";
+		pushButton.Text = "Push the Button";
 		pushButton.Anchor = AnchorStyles.Right;
-		pushButton.Location = new Point(100, 150);
+		pushButton.Location = new Point(75, 150);
+		pushButton.AutoSize = true;
         pushButton.Click += new EventHandler(pushButton_Click);
 		YoPanel.Controls.Add(pushButton);
 		
@@ -79,14 +84,14 @@ class RunningThis
 {
 	static void Main(string[] args) 
 	{
-		if(args[0] != null && args[1] != null)
-		{
-			Form form = new myForm(args[0], args[1]);	
-			Application.Run(form);		
+		if(args.Length == 0)
+		{	
+			Form form = new myForm();
+			Application.Run(form);	
 		}
 		else
 		{
-			Form form = new myForm();
+			Form form = new myForm(args[0], args[1]);	
 			Application.Run(form);			
 		}
 	}
