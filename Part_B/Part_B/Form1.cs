@@ -15,8 +15,9 @@ namespace Part_B
         public mainForm()
         {
             InitializeComponent();
-        }
 
-        ModelessForm mf = new ModelessForm();
+            ModelessForm mf = new ModelessForm();
+            mf.Show();
+        }
     }
 }
