@@ -17,41 +17,60 @@ namespace Part_B
             InitializeComponent();
         }
 
-        private void okButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void applyButton_Click(object sender, EventArgs e)
         {
-
+            if(String.IsNullOrWhiteSpace(nameBox.Text))
+            {
+                nameErrorProvider.SetError(nameBox, "Empty. Add a name.");
+            }
+            else
+            {
+                nameErrorProvider.Clear();
+                if (Apply != null)
+                {
+                    Console.WriteLine("Apply was done");
+                    Apply(this, EventArgs.Empty);
+                }
+                Console.WriteLine("Apply was NOT done");
+            }
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-
-        }
-
-        private void nameBox_PressUp(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
+            Console.WriteLine("Close was done");
+            if(nameErrorProvider.GetError(nameBox)=="")
             {
-                this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+                this.Close();
             }
         }
 
         private void ModelessForm_PressUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if(e.KeyCode==Keys.Escape)
             {
-                this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
+                closeButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            }
-
         }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            applyButton_Click(sender, e);
+            this.Close();
+        }
+
+        // IPassName Implementation
+        public String PassName
+        {
+            get
+            {
+                return nameBox.Text;
+            }
+            set
+            {
+                nameBox.Text = value;
+            }
+        }
+
+        public event EventHandler Apply;
     }
 }

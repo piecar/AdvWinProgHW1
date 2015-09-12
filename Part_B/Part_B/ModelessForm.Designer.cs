@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.AddName = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.okButton = new System.Windows.Forms.Button();
             this.applyButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.nameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.okButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nameErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,18 +55,6 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(241, 20);
             this.nameBox.TabIndex = 1;
-            this.nameBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nameBox_PressUp);
-            // 
-            // okButton
-            // 
-            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.okButton.Location = new System.Drawing.Point(25, 117);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 2;
-            this.okButton.Text = "Ok";
-            this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // applyButton
             // 
@@ -94,14 +82,25 @@
             // 
             this.nameErrorProvider.ContainerControl = this;
             // 
+            // okButton
+            // 
+            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.okButton.Location = new System.Drawing.Point(25, 117);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(75, 23);
+            this.okButton.TabIndex = 5;
+            this.okButton.Text = "Ok";
+            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
             // ModelessForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 152);
+            this.Controls.Add(this.okButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.applyButton);
-            this.Controls.Add(this.okButton);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.AddName);
             this.Name = "ModelessForm";
@@ -117,9 +116,9 @@
 
         private System.Windows.Forms.Label AddName;
         private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.ErrorProvider nameErrorProvider;
+        private System.Windows.Forms.Button okButton;
     }
 }
