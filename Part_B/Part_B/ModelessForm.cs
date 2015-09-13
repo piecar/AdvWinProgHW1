@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Part_B
 {
-    public partial class ModelessForm : Form
+    public partial class ModelessForm : Form, IPassName
     {
         public ModelessForm()
         {
@@ -26,12 +26,11 @@ namespace Part_B
             else
             {
                 nameErrorProvider.Clear();
+                passName = nameBox.Text;
                 if (Apply != null)
                 {
-                    Console.WriteLine("Apply was done");
                     Apply(this, EventArgs.Empty);
                 }
-                Console.WriteLine("Apply was NOT done");
             }
         }
 
@@ -59,12 +58,13 @@ namespace Part_B
         }
 
         // IPassName Implementation
-        public String PassName
+        public string passName
         {
             get
             {
                 return nameBox.Text;
             }
+
             set
             {
                 nameBox.Text = value;

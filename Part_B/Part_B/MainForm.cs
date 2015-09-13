@@ -43,9 +43,6 @@ namespace Part_B
             ModelessForm mf = new ModelessForm();
             initModelessForm(mf);
             mf.Show();
-
-            ListViewItem name = new ListViewItem(PassName);
-            listNames.Items.Add(name);
         }
 
         private void initModelessForm(ModelessForm mf)
@@ -59,9 +56,9 @@ namespace Part_B
             if(nameForm != null)
             {
                 this.PassName = nameForm.passName;
+                ListViewItem name = new ListViewItem(PassName);
+                listNames.Items.Add(name);
             }
         }
-
-
     }
 }
