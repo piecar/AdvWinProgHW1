@@ -115,6 +115,7 @@
             this.Location = new System.Drawing.Point(10, 10);
             this.Name = "mainForm";
             this.Text = "Main Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFrom_Closing);
             this.groupBoxButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 

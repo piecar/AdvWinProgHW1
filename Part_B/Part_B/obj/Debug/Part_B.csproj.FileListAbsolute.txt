@@ -8,3 +8,13 @@ C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Deb
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.exe
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.pdb
 C:\Users\piecar\Documents\FIU Classes\Adv Windows Prog\HW1\Part_B\Part_B\obj\Debug\Part_B.ModelessForm.resources
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\bin\Debug\Part_B.exe.config
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.exe
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.pdb
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\bin\Debug\Part_B.exe
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\bin\Debug\Part_B.pdb
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.csprojResolveAssemblyReference.cache
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.mainForm.resources
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.ModelessForm.resources
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.Properties.Resources.resources
+C:\Users\pieca\Documents\Adv Win Prog\AdvWinProgHW1\Part_B\Part_B\obj\Debug\Part_B.csproj.GenerateResource.Cache

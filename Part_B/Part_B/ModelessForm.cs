@@ -45,9 +45,14 @@ namespace Part_B
 
         private void ModelessForm_PressUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Escape)
+            if(e.KeyCode == Keys.Escape)
             {
+                Console.WriteLine("escape presssed");
                 closeButton_Click(sender, e);
+            }
+            if(e.KeyCode == Keys.Enter)
+            {
+                okButton_Click(sender, e);
             }
         }
 
@@ -72,5 +77,19 @@ namespace Part_B
         }
 
         public event EventHandler Apply;
+
+        private void nameBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Console.WriteLine("escape presssed");
+                closeButton_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                okButton_Click(sender, e);
+            }
+
+        }
     }
 }

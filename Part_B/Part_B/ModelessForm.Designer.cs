@@ -55,6 +55,7 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(241, 20);
             this.nameBox.TabIndex = 1;
+            this.nameBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nameBox_KeyUp);
             // 
             // applyButton
             // 

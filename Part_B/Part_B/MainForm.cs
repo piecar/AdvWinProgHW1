@@ -12,12 +12,16 @@ namespace Part_B
 {
     public partial class mainForm : Form
     {
+        Size dSize;
+        Point dLocation;
         public mainForm()
         {
             InitializeComponent();
 
             this.Size = Properties.Settings.Default.formSize;
             this.Location = Properties.Settings.Default.formPoint;
+            this.dSize = this.Size;
+            this.dLocation = this.Location;
         }
 
         public string PassName { get; set; }
@@ -25,17 +29,21 @@ namespace Part_B
         private void buttonSaveSize_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.formSize = this.Size;
+            Properties.Settings.Default.Save();
         }
 
         private void buttonSaveLoc_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.formPoint = this.Location;
+            Properties.Settings.Default.Save();
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            this.Size = Properties.Settings.Default.formSize;
-            this.Location = Properties.Settings.Default.formPoint;
+            this.Size = dSize;
+            this.Location = dLocation;
+            Properties.Settings.Default.formSize = this.Size;
+            Properties.Settings.Default.formPoint = this.Location;
         }
 
         private void buttonName_Click(object sender, EventArgs e)
@@ -59,6 +67,12 @@ namespace Part_B
                 ListViewItem name = new ListViewItem(PassName);
                 listNames.Items.Add(name);
             }
+        }
+
+        private void MainFrom_Closing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.formPoint = this.Location;
+            Properties.Settings.Default.formSize = this.Size;
         }
     }
 }
