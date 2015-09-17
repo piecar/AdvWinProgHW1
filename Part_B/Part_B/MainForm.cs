@@ -73,6 +73,7 @@ namespace Part_B
         {
             Properties.Settings.Default.formPoint = this.Location;
             Properties.Settings.Default.formSize = this.Size;
+            Properties.Settings.Default.Save();
         }
     }
 }
