@@ -22,6 +22,8 @@ namespace Part_B
             this.Location = Properties.Settings.Default.formPoint;
             this.dSize = this.Size;
             this.dLocation = this.Location;
+
+            this.StartPosition = FormStartPosition.Manual;
         }
 
         public string PassName { get; set; }
